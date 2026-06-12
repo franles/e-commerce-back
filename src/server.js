@@ -2,6 +2,7 @@ import express from 'express'
 import { connectDB, disconnectDB } from './config/configdb.js'
 import dotenv from 'dotenv'
 import authRoutes from './routes/authRoutes.js'
+import productRoutes from './routes/productsRoutes.js'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 
@@ -38,6 +39,7 @@ app.use(cookieParser())
 
 //Rutas API
 app.use('/api/auth', authRoutes)
+app.use('/api/products', productRoutes)
 
 //Primero se conecta a la DB y luego al Puerto
 connectDB()

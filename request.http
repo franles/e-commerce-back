@@ -21,3 +21,37 @@ Content-Type: application/json
 
 ### LOGOUT USER
 POST http://localhost:3000/api/auth/logout
+
+
+### PETICIONES DE TODOS LOS PRODUCTOS
+GET http://localhost:3000/api/products
+
+
+### CREAR PRODUCTOS
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "name": "producto a eliminar",
+    "description": "eliminarrrrrrrrrrrrrrrrrrrrrrr",
+    "price": 11111,
+    "stock": 5,
+    "imageUrl": "https://res.cloudinary.com/dzxa0ykpd/image/upload/v1780970041/D_716149-MLA82553365374_032025-C_wqdwiv.jpg"
+}
+
+
+### ACTUALIZAR PRODUCTO
+PUT http://localhost:3000/api/products/6a281fae290edf788c0e772a
+Content-Type: application/json
+
+{
+    "price": 8500
+}
+
+
+###OBTENER UN PRODUCTO POR ID
+GET http://localhost:3000/api/products/6a281fae290edf788c0e772a
+
+
+### ELIMINAR UN PRODUCTO POR ID
+DELETE http://localhost:3000/api/products/6a28417b4895e722fb433574
