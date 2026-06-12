@@ -1,0 +1,20 @@
+### USER REGISTER 
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "nosenose5",
+    "email": "nosenose5@gmail.com",
+    "password": "nosenose5"
+}
+
+
+### LOGIN USER
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "nosenose5@gmail.com",
+    "password": "nosenose5"
+}
+

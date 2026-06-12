@@ -1,15 +1,12 @@
 import express from 'express'
-import { profile, registerUser } from '../controllers/authControllers.js'
+import { profile, registerUser, loginUser } from '../controllers/authControllers.js'
 
 
 const router = express.Router()
 
 router.post('/register', registerUser)
 
-router.post('/login', (req, res) => {
-    console.log('Hiciste una peticion POST a /login')
-    res.json({ message: 'Hiciste una peticion POST a /login' })
-})
+router.post('/login', loginUser)
 
 router.post('/logout', (req, res) => {
     console.log('Hiciste una peticion POST a /logout')
