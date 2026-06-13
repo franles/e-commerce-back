@@ -1,3 +1,5 @@
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+
 ### USER REGISTER 
 POST http://localhost:3000/api/auth/register
 Content-Type: application/json
@@ -8,7 +10,6 @@ Content-Type: application/json
     "password": "nosenose5"
 }
 
-
 ### LOGIN USER
 POST http://localhost:3000/api/auth/login
 Content-Type: application/json
@@ -18,16 +19,17 @@ Content-Type: application/json
     "password": "nosenose5"
 }
 
-
 ### LOGOUT USER
 POST http://localhost:3000/api/auth/logout
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------
 
 ### PETICIONES DE TODOS LOS PRODUCTOS
 GET http://localhost:3000/api/products
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------
 
-### CREAR PRODUCTOS
+### CREAR PRODUCTO
 POST http://localhost:3000/api/products
 Content-Type: application/json
 
@@ -49,9 +51,41 @@ Content-Type: application/json
 }
 
 
-###OBTENER UN PRODUCTO POR ID
+### OBTENER UN PRODUCTO
 GET http://localhost:3000/api/products/6a281fae290edf788c0e772a
 
 
-### ELIMINAR UN PRODUCTO POR ID
+### ELIMINAR UN PRODUCTO
 DELETE http://localhost:3000/api/products/6a28417b4895e722fb433574
+
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+
+### ADD TO CART
+POST http://localhost:3000/api/cart/add
+Content-Type: application/json
+
+{
+    "userId": "6a1eff5638fab48282df7bee",
+    "productId": "6a281fae290edf788c0e772a",
+    "quantity": 1
+}
+
+### GET CART
+GET http://localhost:3000/api/cart/get/6a1eff5638fab48282df7bee
+
+### UPTADE CART
+PUT http://localhost:3000/api/cart/update/6a1eff5638fab48282df7bee
+Content-Type: application/json
+
+{
+    "userId": "6a1eff5638fab48282df7bee",
+    "productId": "6a281fae290edf788c0e772a",
+    "quantity": 10
+}
+
+### DELETE CART
+DELETE http://localhost:3000/api/cart/delete/6a1eff5638fab48282df7bee
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+
